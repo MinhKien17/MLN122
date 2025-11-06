@@ -1,0 +1,131 @@
+.team-carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel-slide {
+  padding: 0 15px;
+}
+
+.member-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 10px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(102, 126, 234, 0.3);
+}
+
+.member-avatar {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.member-card h3 {
+  font-size: 1.3rem;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.member-card p {
+  font-size: 1rem;
+  color: #718096;
+}
+
+/* Slick Carousel Custom Styles */
+.team-carousel-container .slick-dots {
+  bottom: -40px;
+}
+
+.team-carousel-container .slick-dots li button:before {
+  font-size: 12px;
+  color: #667eea;
+}
+
+.team-carousel-container .slick-dots li.slick-active button:before {
+  color: #764ba2;
+}
+
+.team-carousel-container .slick-prev,
+.team-carousel-container .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.team-carousel-container .slick-prev {
+  left: -50px;
+}
+
+.team-carousel-container .slick-next {
+  right: -50px;
+}
+
+.team-carousel-container .slick-prev:before,
+.team-carousel-container .slick-next:before {
+  font-size: 40px;
+  color: #667eea;
+}
+
+.team-carousel-container .slick-prev:hover:before,
+.team-carousel-container .slick-next:hover:before {
+  color: #764ba2;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .team-carousel-container .slick-prev {
+    left: -30px;
+  }
+
+  .team-carousel-container .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-carousel-container .slick-prev,
+  .team-carousel-container .slick-next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .team-carousel-container .slick-prev {
+    left: -10px;
+  }
+
+  .team-carousel-container .slick-next {
+    right: -10px;
+  }
+
+  .team-carousel-container .slick-prev:before,
+  .team-carousel-container .slick-next:before {
+    font-size: 30px;
+  }
+
+  .member-card {
+    height: 220px;
+    padding: 1.5rem;
+  }
+
+  .member-avatar {
+    font-size: 3rem;
+  }
+
+  .member-card h3 {
+    font-size: 1.1rem;
+  }
+}
