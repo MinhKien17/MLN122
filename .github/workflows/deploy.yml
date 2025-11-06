@@ -35,14 +35,17 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+          cache-dependency-path: learning-hub-mln122/package-lock.json
 
       # 3. Cài đặt các thư viện (giống như npm install ở máy bạn)
       - name: Install dependencies
         run: npm install
+        working-directory: learning-hub-mln122
 
       # 4. Chạy lệnh build của Vite (tạo ra thư mục 'dist')
       - name: Build
         run: npm run build
+        working-directory: learning-hub-mln122
 
       # 5. Cấu hình cho GitHub Pages
       - name: Setup Pages
@@ -52,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './learning-hub-mln122/dist'
 
   # Công việc "deploy" (triển khai)
   deploy:
