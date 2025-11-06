@@ -74,7 +74,7 @@ function Home() {
       {/* Hero Section - Moved to top */}
       <section className="hero-section" id="hero-section">
         <h1 className="hero-title">Chào mừng đến với Learning Hub MLN122</h1>
-        <p className="hero-subtitle text-white">
+        <p className="hero-subtitle">
           Khám phá kiến thức Kinh tế Chính trị - Chương 6
         </p>
         <p className="hero-description">

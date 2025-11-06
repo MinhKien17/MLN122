@@ -5,9 +5,18 @@ function Videos() {
   const [videos] = useState([
     {
       id: 1,
+      title: 'MLN122 - Công Nghiệp Hoá - Hiện Đại Hoá Đất Nước',
+      videoId: 'XoqjM2hF9r8',
+      description: 'Video này cung cấp cái nhìn của 2 bạn trong nhóm về quá trình công nghiệp hóa, hiện đại hóa ở Việt Nam.',
+      duration: '11:23',
+      views: '100',
+      topics: []
+    },
+    {
+      id: 2,
       title: 'Công nghiệp hoá tại Việt Nam',
       videoId: 'h0wUk0wqaas',
-      description: 'Video này cung cấp cái nhìn tổng quan về quá trình công nghiệp hóa, hiện đại hóa ở Việt Nam. Nội dung sẽ bàn về các mô hình công nghiệp hoá ở Hàn Quốc và Nhật Bản, những điểm khác biệt giữa các nước khác so với Việt Nam và các thách thức/thời cơ của Việt Nam.',
+      description: 'Video này cung cấp cái nhìn tổng quan về quá trình công nghiệp hóa, hiện đại hóa ở Việt Nam. Nội dung sẽ bàn về các mô hình công nghiệp hoá ở Hàn Quốc và Nhật Bản, những điểm khác biệt giữa các nước khác so với Việt Nam và các thách thức/thời cơ của Việt Nam. [Do AI NotebookLM tạo ra]',
       duration: '4:38',
       views: '100',
       topics: [
@@ -58,14 +67,16 @@ function Videos() {
                 <h2 className="video-title">{video.title}</h2>
                 <p className="video-description">{video.description}</p>
                 
-                <div className="video-topics">
-                  <h3>📚 Nội dung chính:</h3>
-                  <ul>
-                    {video.topics.map((topic, index) => (
-                      <li key={index}>{topic}</li>
-                    ))}
-                  </ul>
-                </div>
+                {Array.isArray(video.topics) && video.topics.length > 0 && (
+                  <div className="video-topics">
+                    <h3>📚 Nội dung chính:</h3>
+                    <ul>
+                      {video.topics.map((topic, index) => (
+                        <li key={index}>{topic}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </div>
