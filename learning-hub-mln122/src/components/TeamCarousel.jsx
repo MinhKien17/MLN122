@@ -2,6 +2,11 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import './TeamCarousel.css'
+// Ảnh thành viên (đặt trong src/assets/img)
+import imgCuong from '../assets/img/Cuong.png'
+import imgVu from '../assets/img/Vu.png'
+import imgPhong from '../assets/img/Phong.png'
+import imgKien from '../assets/img/Kien.png'
 
 function TeamCarousel() {
   const teamMembers = [
@@ -9,27 +14,46 @@ function TeamCarousel() {
       id: 1,
       name: "Phạm Chí Cường",
       role: "Trưởng nhóm",
-      avatar: "👨‍🎓"
+      avatar: "👨‍🎓",
+      photo: imgCuong,
+      tag: 'MLN122'
     },
     {
       id: 2,
       name: "Đoàn Minh Kiên",
       role: "Thành viên",
-      avatar: "👨‍🎓"
+      avatar: "👨‍🎓",
+      photo: imgKien,
+      tag: 'MLN122'
     },
     {
       id: 3,
       name: "Bùi Trần Duy Vũ",
       role: "Thành viên",
-      avatar: "👨‍🎓"
+      avatar: "👨‍🎓",
+      photo: imgVu,
+      tag: 'MLN122'
     },
     {
       id: 4,
       name: "Nguyễn Thượng Phong",
       role: "Thành viên",
-      avatar: "👩‍🎓"
+      avatar: "👩‍🎓",
+      photo: imgPhong,
+      tag: 'MLN122'
     }
   ]
+
+  const getInitials = (fullName) => {
+    try {
+      const parts = fullName.trim().split(/\s+/)
+      const last = parts[parts.length - 1] || ''
+      const first = parts[0] || ''
+      return (first[0] || '').toUpperCase() + (last[0] || '').toUpperCase()
+    } catch {
+      return 'ML'
+    }
+  }
 
   const settings = {
     dots: true,
@@ -63,10 +87,33 @@ function TeamCarousel() {
       <Slider {...settings}>
         {teamMembers.map((member) => (
           <div key={member.id} className="carousel-slide">
-            <div className="member-card">
-              <div className="member-avatar">{member.avatar}</div>
-              <h3>{member.name}</h3>
-              <p>{member.role}</p>
+            <div className="member-card pro-card">
+              {/* Viền phát sáng và số power như thẻ sưu tập */}
+              <div className="card-frame">
+                <div className="card-badges">
+                  {typeof member.power !== 'undefined' && (
+                    <span className="badge-power">{member.power}</span>
+                  )}
+                  <span className="badge-tag">{member.tag}</span>
+                </div>
+
+                <div className="card-media">
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} loading="lazy" />
+                  ) : (
+                    <div className="avatar-fallback" aria-label={member.name}>
+                      <span className="fallback-initials">{getInitials(member.name)}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="card-info">
+                <h3 className="card-name">{member.name}</h3>
+                <div className="card-meta">
+                  <span className="card-role">{member.role}</span>
+                </div>
+              </div>
             </div>
           </div>
         ))}

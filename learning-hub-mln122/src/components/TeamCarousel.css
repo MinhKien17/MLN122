@@ -1,48 +1,155 @@
 .team-carousel-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px; /* rộng hơn một chút */
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .carousel-slide {
-  padding: 0 15px;
+  padding: 0 10px; /* giảm gutter để card rộng hơn */
 }
 
+/* Card style ("pro-card") */
 .member-card {
-  background: white;
-  border-radius: 15px;
-  padding: 2rem;
+  position: relative;
+  background: transparent;
+  border-radius: 18px;
+  padding: 1rem 1rem 1.25rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   margin: 10px;
-  height: 250px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.member-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(102, 126, 234, 0.3);
+.pro-card:hover {
+  transform: translateY(-8px);
 }
 
-.member-avatar {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+.pro-card .card-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(255,215,128,0.75), rgba(118,75,162,0.75));
+  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.35), 0 0 0 1px rgba(255,255,255,0.05) inset;
 }
 
-.member-card h3 {
-  font-size: 1.3rem;
+.pro-card .card-frame::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffd782, #764ba2);
+  filter: blur(12px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.pro-card .card-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.badge-power {
+  background: linear-gradient(135deg, #ffd782, #f6ad55);
   color: #1a202c;
-  margin-bottom: 0.5rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(246, 173, 85, 0.45);
 }
 
-.member-card p {
-  font-size: 1rem;
-  color: #718096;
+.badge-tag {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.pro-card .card-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(120% 120% at 50% 0%, #232a3b 0%, #0b0f1a 70%);
+  aspect-ratio: 2 / 3;
+}
+
+.pro-card .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+}
+
+.avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #2b2f44, #141726);
+  color: #fff;
+}
+
+.fallback-initials {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.6);
+}
+
+.pro-card .card-info {
+  width: 100%;
+  padding-top: 0.9rem;
+}
+
+.pro-card .card-name {
+  font-size: 1.18rem;
+  font-weight: 800;
+  margin: 0.25rem 0 0.35rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #9f7aea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.pro-card .card-role {
+  font-size: 0.95rem;
+  margin: 0;
+  background: linear-gradient(135deg, #c3dafe 0%, #b794f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.95;
+  font-weight: 800; /* đậm hơn một chút */
+}
+
+.pro-card .card-meta {
+  margin-top: 0.65rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  color: #a0aec0;
+}
+
+.card-rarity {
+  letter-spacing: 1px;
 }
 
 /* Slick Carousel Custom Styles */
@@ -87,6 +194,9 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .team-carousel-container {
+    max-width: 1200px; /* giảm một chút cho tablet */
+  }
   .team-carousel-container .slick-prev {
     left: -30px;
   }
@@ -97,6 +207,9 @@
 }
 
 @media (max-width: 768px) {
+  .team-carousel-container {
+    max-width: 100%;
+  }
   .team-carousel-container .slick-prev,
   .team-carousel-container .slick-next {
     width: 30px;
@@ -117,15 +230,7 @@
   }
 
   .member-card {
-    height: 220px;
-    padding: 1.5rem;
-  }
-
-  .member-avatar {
-    font-size: 3rem;
-  }
-
-  .member-card h3 {
-    font-size: 1.1rem;
+    min-height: 360px;
+    padding: 0.75rem 0.75rem 1rem;
   }
 }
