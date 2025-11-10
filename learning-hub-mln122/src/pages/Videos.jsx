@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './Videos.css'
 
+// Import ảnh nền
+import videoBgImage from '../assets/background/Mac_Lennin_4.jpg';
+
 function Videos() {
   const [videos] = useState([
     {
@@ -29,7 +32,14 @@ function Videos() {
 
   return (
     <div className="videos-page">
-      <div className="videos-header">
+      <div 
+        className="videos-header"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${videoBgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <h1>📹 Video Bài Giảng Tổng Hợp</h1>
         <p className="header-subtitle">
           Học tập hiệu quả qua video bài giảng về Kinh tế Chính trị - Chương 6
