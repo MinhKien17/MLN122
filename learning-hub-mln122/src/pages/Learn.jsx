@@ -5,6 +5,12 @@ import LearnSidebar from '../components/LearnSidebar'
 import LearnToc from '../components/LearnToc'
 import './Learn.css'
 
+// Import các ảnh minh họa
+import CN1_img from '../assets/example/CN1.jpg';
+import CN2_img from '../assets/example/CN2.jpg';
+import CN3_img from '../assets/example/CN3.webp';
+import CN4_img from '../assets/example/CN4.webp';
+
 function Learn() {
   useEffect(() => {
     // Scroll to top when component mounts
@@ -107,6 +113,7 @@ function Learn() {
 
                 <div className="cmcn-item">
                   <h6>Cách mạng công nghiệp lần thứ nhất</h6>
+                  <img src={CN1_img} alt="Cách mạng công nghiệp 1" className="cmcn-image" />
                   <p>
                     Khởi phát từ nước Anh, bắt đầu từ giữa thế kỷ XVIII đến giữa thế kỷ XIX.
                   </p>
@@ -128,6 +135,7 @@ function Learn() {
 
                 <div className="cmcn-item">
                   <h6>Cách mạng công nghiệp lần thứ hai</h6>
+                  <img src={CN2_img} alt="Cách mạng công nghiệp 2" className="cmcn-image" />
                   <p>
                     Diễn ra từ nửa cuối thế kỷ XIX đến đầu thế kỷ XX.
                   </p>
@@ -144,6 +152,7 @@ function Learn() {
 
                 <div className="cmcn-item">
                   <h6>Cách mạng công nghiệp lần thứ ba</h6>
+                  <img src={CN3_img} alt="Cách mạng công nghiệp 3" className="cmcn-image" />
                   <p>
                     Bắt đầu từ khoảng những năm đầu thập niên 60 của thế kỷ XX đến cuối thế kỷ XX.
                   </p>
@@ -160,6 +169,7 @@ function Learn() {
 
                 <div className="cmcn-item highlight">
                   <h6>Cách mạng công nghiệp lần thứ tư</h6>
+                  <img src={CN4_img} alt="Cách mạng công nghiệp 4" className="cmcn-image" />
                   <p>
                     Được đề cập lần đầu tiên tại Hội chợ triển lãm công nghệ Hannover (Đức) năm 2011.
                   </p>

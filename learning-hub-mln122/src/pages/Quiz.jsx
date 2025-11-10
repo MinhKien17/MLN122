@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './Quiz.css'
 
+// Import ảnh nền
+import quizBgImage from '../assets/background/Mac_Lennin_2.jpg';
+
 function Quiz() {
   // Dữ liệu 10 câu hỏi trắc nghiệm dựa trên Chương 6
   const quizData = [
@@ -284,7 +287,16 @@ function Quiz() {
   }
 
   return (
-    <div className="quiz-page">
+    <div 
+      className="quiz-page"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${quizBgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        minHeight: '100vh'
+      }}
+    >
       <div className="quiz-header">
         <h1>📝 Quiz Kiểm Tra Kiến Thức</h1>
         <p className="quiz-subtitle">Chương 6: Công nghiệp hóa, Hiện đại hóa và Hội nhập Kinh tế Quốc tế</p>
