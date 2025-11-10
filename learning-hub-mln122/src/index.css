@@ -22,6 +22,14 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  /* YÊU CẦU 1: Đặt nền 'ngoài' thành màu giấy cũ */
+  background-color: #FAF3E0;
+  /* YÊU CẦU 3: Đặt màu chữ mặc định là đen */
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #C62828; /* Tiêu đề màu đỏ sậm */
 }
 
 #root {
@@ -50,7 +58,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #667eea;
+  background-color: #DA251D;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -63,7 +71,18 @@ button:hover {
 
 button:focus,
 button:focus-visible {
-  outline: 2px solid #667eea;
+  outline: 2px solid #DA251D;
   outline-offset: 2px;
+}
+
+/* Đặt màu link mặc định là màu đỏ nhấn */
+a {
+  color: #C62828;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 

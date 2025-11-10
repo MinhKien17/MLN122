@@ -1,6 +1,6 @@
 .quiz-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #C62828;
   padding: 60px 20px 40px;
 }
 
@@ -14,6 +14,7 @@
   font-size: 2.5rem;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  color: white !important;
 }
 
 .quiz-subtitle {
@@ -29,7 +30,7 @@
 }
 
 .progress-section {
-  background: white;
+  background: #FFFFFF;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
@@ -39,7 +40,7 @@
 .progress-text {
   font-size: 1rem;
   font-weight: 600;
-  color: #667eea;
+  color: #C62828;
   margin-bottom: 10px;
 }
 
@@ -53,13 +54,13 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: #FFD700;
   transition: width 0.4s ease;
   border-radius: 10px;
 }
 
 .question-card {
-  background: white;
+  background: #FFFFFF;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
@@ -86,7 +87,7 @@
   gap: 15px;
   padding: 18px 20px;
   border: 2px solid #e2e8f0;
-  background: white;
+  background: #FFFFFF;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -97,16 +98,17 @@
 }
 
 .option-button:hover {
-  border-color: #667eea;
+  border-color: #C62828;
   background: #f7fafc;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 8px rgba(198, 40, 40, 0.2);
 }
 
 .option-button.selected {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  border-color: #C62828;
+  background-color: #FFF8E1;
+  box-shadow: 0 0 0 2px #C62828;
+  color: #212121;
 }
 
 .option-letter {
@@ -114,7 +116,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #667eea;
+  background: #C62828;
   color: white;
   display: flex;
   align-items: center;
@@ -124,8 +126,8 @@
 }
 
 .option-button.selected .option-letter {
-  background: white;
-  color: #667eea;
+  background: #C62828;
+  color: white;
 }
 
 .option-text {
@@ -137,13 +139,13 @@
 }
 
 .option-button.selected .option-text {
-  color: white;
+  color: #212121;
 }
 
 .next-button {
   width: 100%;
   padding: 16px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #DA251D 0%, #FFD700 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -173,7 +175,7 @@
 
 /* Results Section */
 .results-section {
-  background: white;
+  background: #FFFFFF;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
@@ -182,7 +184,7 @@
 .results-section h1 {
   text-align: center;
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #DA251D 0%, #FFD700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -197,7 +199,7 @@
 
 .restart-button-top {
   padding: 14px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #DA251D 0%, #FFD700 100%);
   color: white;
   border: none;
   border-radius: 50px;
@@ -205,7 +207,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(218, 37, 29, 0.3);
 }
 
 .restart-button-top:hover {
@@ -216,13 +218,13 @@
 /* Motivation Message */
 .motivation-message {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  border-left: 5px solid #667eea;
+  border-left: 5px solid #DA251D;
   padding: 20px 25px;
   border-radius: 12px;
   margin-bottom: 30px;
   text-align: center;
   animation: fadeInScale 0.6s ease;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 4px 12px rgba(218, 37, 29, 0.1);
 }
 
 .motivation-emoji {
@@ -261,7 +263,7 @@
 }
 
 .score-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #DA251D 0%, #FFD700 100%);
   color: white;
   padding: 40px;
   border-radius: 12px;
@@ -321,7 +323,7 @@
 
 .percentage-fill {
   height: 100%;
-  background: white;
+  background: #FFFFFF;
   transition: width 0.6s ease;
   border-radius: 10px;
 }
@@ -455,7 +457,7 @@
 
 .review-option {
   padding: 12px 15px;
-  background: white;
+  background: #FFFFFF;
   border-radius: 6px;
   border: 2px solid #e2e8f0;
   line-height: 1.5;

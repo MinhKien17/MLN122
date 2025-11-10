@@ -1,0 +1,104 @@
+/* Trong src/pages/Documents.css */
+
+.doc-page-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  min-height: 80vh;
+  overflow: hidden; /* Giữ bo góc */
+}
+
+/* --- Sidebar (Trái) --- */
+.doc-sidebar {
+  flex: 0 0 300px; /* Cố định chiều rộng 300px */
+  border-right: 1px solid #E5E7EB;
+  background: #FAFAFA; /* Màu nền xám nhạt */
+  padding: 1rem;
+}
+
+.doc-sidebar h3 {
+  color: #C62828; /* Màu đỏ nhấn */
+  border-bottom: 2px solid #E0E0E0;
+  padding-bottom: 0.5rem;
+}
+
+.doc-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+/* Làm nổi bật item đang được 'active' */
+.doc-item.active {
+  background-color: #FFF8E1; /* Màu vàng kem nhạt */
+}
+.doc-item.active .doc-view-btn {
+  color: #C62828;
+  font-weight: 600;
+}
+
+/* Nút để xem (trái) */
+.doc-view-btn {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+  border-radius: 6px 0 0 6px;
+}
+
+/* Nút download (phải) */
+.doc-download-btn {
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  color: #555;
+  border-radius: 0 6px 6px 0;
+}
+
+.doc-view-btn:hover {
+  color: #C62828;
+}
+
+.doc-download-btn:hover {
+  color: #FFFFFF;
+  background-color: #C62828;
+}
+
+/* --- Viewer (Phải) --- */
+.doc-viewer-content {
+  flex-grow: 1;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 90vh; /* Giới hạn chiều cao cho viewer */
+}
+
+.doc-viewer-title {
+  margin-top: 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+.pdf-iframe {
+  flex-grow: 1; /* Cho phép iFrame lấp đầy không gian còn lại */
+  border: none;
+  border-radius: 4px;
+}

@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #C62828; /* Nền đỏ sậm */
   padding: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -51,7 +51,11 @@
 }
 
 .navbar-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFD700; /* Link hover màu vàng */
+}
+
+.navbar-link.active {
+  color: #FFD700; /* Link active màu vàng */
 }
 
 @media (max-width: 768px) {

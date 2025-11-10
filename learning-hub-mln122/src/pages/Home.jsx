@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { driver } from 'driver.js'
 import 'driver.js/dist/driver.css'
 import TeamCarousel from '../components/TeamCarousel'
+import bgImage from '../assets/background/Mac_Lennin.jpg'
 import './Home.css'
 
 function Home() {
@@ -46,6 +47,15 @@ function Home() {
           }
         },
         {
+          element: '#nav-documents',
+          popover: {
+            title: '📄 Tài liệu',
+            description: 'Tải xuống các tài liệu học tập quan trọng như giáo trình MLN111 và MLN122.',
+            side: 'bottom',
+            align: 'start'
+          }
+        },
+        {
           element: '#team-carousel',
           popover: {
             title: '👥 Đội ngũ phát triển',
@@ -72,7 +82,13 @@ function Home() {
   return (
     <div className="home">
       {/* Hero Section - Moved to top */}
-      <section className="hero-section" id="hero-section">
+      <div 
+        className="hero-section"
+        id="hero-section"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${bgImage})`
+        }}
+      >
         <h1 className="hero-title">Chào mừng đến với Learning Hub MLN122</h1>
         <p className="hero-subtitle">
           Khám phá kiến thức Kinh tế Chính trị - Chương 6
@@ -88,7 +104,7 @@ function Home() {
             Xem hướng dẫn 🎯
           </button>
         </div>
-      </section>
+      </div>
 
       <div className="content-container">
         <section className="intro-section">
@@ -128,8 +144,7 @@ function Home() {
                 qua các bài kiểm tra tương tác
               </li>
               <li>
-                💬 <strong>Kết nối cộng đồng:</strong> Tạo môi trường để sinh viên
-                trao đổi và học hỏi lẫn nhau
+                📄 <strong>Tài liệu học tập:</strong> Cung cấp các giáo trình và tài liệu quan trọng để tải xuống
               </li>
             </ul>
           </div>

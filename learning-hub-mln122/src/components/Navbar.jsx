@@ -30,8 +30,8 @@ function Navbar() {
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/socials" className="navbar-link" id="nav-socials">
-              Mạng xã hội
+            <Link to="/documents" className="navbar-link" id="nav-documents">
+              Tài liệu
             </Link>
           </li>
         </ul>

@@ -3,10 +3,10 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import './TeamCarousel.css'
 // Ảnh thành viên (đặt trong src/assets/img)
-import imgCuong from '../assets/img/Cuong.png'
-import imgVu from '../assets/img/Vu.png'
-import imgPhong from '../assets/img/Phong.png'
-import imgKien from '../assets/img/Kien.png'
+import KienPng from '../assets/img/Kien.png';
+import CuongPng from '../assets/img/Cuong.png';
+import VuPng from '../assets/img/Vu.png';
+import PhongPng from '../assets/img/Phong.png';
 
 function TeamCarousel() {
   const teamMembers = [
@@ -15,7 +15,7 @@ function TeamCarousel() {
       name: "Phạm Chí Cường",
       role: "Trưởng nhóm",
       avatar: "👨‍🎓",
-      photo: imgCuong,
+      image: CuongPng,
       tag: 'MLN122'
     },
     {
@@ -23,7 +23,7 @@ function TeamCarousel() {
       name: "Đoàn Minh Kiên",
       role: "Thành viên",
       avatar: "👨‍🎓",
-      photo: imgKien,
+      image: KienPng,
       tag: 'MLN122'
     },
     {
@@ -31,7 +31,7 @@ function TeamCarousel() {
       name: "Bùi Trần Duy Vũ",
       role: "Thành viên",
       avatar: "👨‍🎓",
-      photo: imgVu,
+      image: VuPng,
       tag: 'MLN122'
     },
     {
@@ -39,7 +39,7 @@ function TeamCarousel() {
       name: "Nguyễn Thượng Phong",
       role: "Thành viên",
       avatar: "👩‍🎓",
-      photo: imgPhong,
+      image: PhongPng,
       tag: 'MLN122'
     }
   ]
@@ -98,8 +98,8 @@ function TeamCarousel() {
                 </div>
 
                 <div className="card-media">
-                  {member.photo ? (
-                    <img src={member.photo} alt={member.name} loading="lazy" />
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} loading="lazy" />
                   ) : (
                     <div className="avatar-fallback" aria-label={member.name}>
                       <span className="fallback-initials">{getInitials(member.name)}</span>

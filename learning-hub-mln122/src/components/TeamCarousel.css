@@ -33,8 +33,8 @@
   width: 100%;
   border-radius: 16px;
   padding: 10px;
-  background: linear-gradient(135deg, rgba(255,215,128,0.75), rgba(118,75,162,0.75));
-  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.35), 0 0 0 1px rgba(255,255,255,0.05) inset;
+  background: linear-gradient(135deg, rgba(255,215,128,0.75), rgba(218,37,29,0.75));
+  box-shadow: 0 10px 30px rgba(218, 37, 29, 0.35), 0 0 0 1px rgba(255,255,255,0.05) inset;
 }
 
 .pro-card .card-frame::before {
@@ -42,7 +42,7 @@
   position: absolute;
   inset: -3px;
   border-radius: 18px;
-  background: linear-gradient(135deg, #ffd782, #764ba2);
+  background: linear-gradient(135deg, #FFD700, #DA251D);
   filter: blur(12px);
   opacity: 0.6;
   z-index: -1;
@@ -70,13 +70,13 @@
 }
 
 .badge-tag {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #DA251D, #FFD700);
   color: #fff;
   font-weight: 700;
   font-size: 0.75rem;
   padding: 6px 10px;
   border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 16px rgba(218, 37, 29, 0.4);
 }
 
 .pro-card .card-media {
@@ -120,7 +120,7 @@
   font-size: 1.18rem;
   font-weight: 800;
   margin: 0.25rem 0 0.35rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #9f7aea 100%);
+  background: linear-gradient(90deg, #DA251D 0%, #FFD700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -130,7 +130,7 @@
 .pro-card .card-role {
   font-size: 0.95rem;
   margin: 0;
-  background: linear-gradient(135deg, #c3dafe 0%, #b794f4 100%);
+  background: linear-gradient(90deg, #DA251D 0%, #FFD700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -159,11 +159,11 @@
 
 .team-carousel-container .slick-dots li button:before {
   font-size: 12px;
-  color: #667eea;
+  color: #DA251D;
 }
 
 .team-carousel-container .slick-dots li.slick-active button:before {
-  color: #764ba2;
+  color: #DA251D;
 }
 
 .team-carousel-container .slick-prev,
@@ -184,12 +184,12 @@
 .team-carousel-container .slick-prev:before,
 .team-carousel-container .slick-next:before {
   font-size: 40px;
-  color: #667eea;
+  color: #DA251D;
 }
 
 .team-carousel-container .slick-prev:hover:before,
 .team-carousel-container .slick-next:hover:before {
-  color: #764ba2;
+  color: #DA251D;
 }
 
 /* Responsive */

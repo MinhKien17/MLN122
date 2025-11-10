@@ -10,10 +10,10 @@
 
 .sidebar-content h3 {
   font-size: 1.2rem;
-  color: #667eea;
+  color: #DA251D;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #667eea;
+  border-bottom: 2px solid #DA251D;
 }
 
 .sidebar-nav ul {
@@ -38,7 +38,7 @@
 }
 
 .sidebar-nav .nav-link:hover {
-  background: #667eea;
+  background: #DA251D;
   color: white;
   transform: translateX(5px);
 }
@@ -59,7 +59,7 @@
 }
 
 .sub-nav .nav-link:hover {
-  background: #764ba2;
+  background: #DA251D;
 }
 
 /* Scrollbar styling */
@@ -72,12 +72,12 @@
 }
 
 .learn-sidebar::-webkit-scrollbar-thumb {
-  background: #667eea;
+  background: #DA251D;
   border-radius: 3px;
 }
 
 .learn-sidebar::-webkit-scrollbar-thumb:hover {
-  background: #5568d3;
+  background: #B71C1C;
 }
 
 @media (max-width: 1024px) {
